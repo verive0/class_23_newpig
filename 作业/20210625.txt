@@ -1,0 +1,1 @@
+1、结合业务说说你用python怎么做接口自动化（python +requests+pytest）2、adb指令背15个3、接口自动化中上下游接口怎么实现传递参数

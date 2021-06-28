@@ -1,0 +1,24 @@
+1、结合业务说说你用python怎么做UI自动化（框架+python+selenium+unittest）=50俯卧撑
+
+我用的是Python+selenium+unittest实现自动化的。我做的是个用户管理系统CRM，主要分为用户管理，订单管理，发票管理等，我主要负责将订单管理，主要是用unittest框架将主流程实现自动化。首先按po模式构建一个自动化项目包，将项目分块存放，比如说配置文件，工具类文件，测试报告等，将要用到的模块封装存放，比如登陆模块，建个表把URL和username，password放进去，调用xrld模块把数据导出来，webdriver.get打开登陆界面，assert断言标题判断是否进入登陆界面，xpath找到输入框输入username和password，click实现登陆。在订单管理中先是用封装好的登陆模块登陆后台管理员id进入到订单界面，switchToWindow切换句柄到订单界面对在系统中生成的订单进行审核和管理，assert断言标题后开始操作订单界面，根据文本test拿到新生成订单，提取订单用户名核对信用记录，if判断低于阈值的就不予通过取消订单，正常则予以通过，核对付款后就开始发货。主流程用test封装好后用testrun或者一些HTML的自动化脚本来跑，输出自动化测试报告。
+
+出现UI自动化的业务问题：未及时更新数据，前端做修改后未改变自动化的参数
+
+2、一个接口由什么组成
+url，请求头，请求体，请求方法
+
+3、https和http区别
+ssl超文本安全协议，
+ca证书
+http端口80，https端口443
+http连接是无状态的，HTTPS需要身份识别
+
+4、post和get区别
+（接口测试.txt）
+post 数据在请求体中，get数据在url地址栏后
+		get一般用于查询数据
+		get有长度限制
+
+5、背书协议状态码
+
+byProvinceName=浙江
